@@ -45,8 +45,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                    aws eks update-kubeconfig --name 
-jenkinstesting --region $AWS_REGION
+                    aws eks update-kubeconfig --name jenkinstesting --region $AWS_REGION
                     kubectl apply -f Deployment.yaml
                     '''
                 }
